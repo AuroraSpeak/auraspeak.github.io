@@ -1,0 +1,27 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Aura-Speak'
+theme = "coder"
+[markup.highlight]
+style = "github-dark"
+[params]
+    author = "Jannis Karpinski"
+    info = "Just a hobbyist that has high goals"
+    description = "Journal of writing an own Protocol using golang"
+    keywords = "blog,developer,personal"
+    colorScheme = "dark"
+    customCSS = ["css/custom.css"]
+
+[menus]
+    [[menus.main]]
+        name = "Home"
+        pageRef = "/"
+        weight = 10
+    [[menus.main]]
+        name = "Posts"
+        pageRef = "/posts"
+        weight = 20
+    [[menus.main]]
+        name = "About"
+        pageRef = "/about"
+        weight = 30

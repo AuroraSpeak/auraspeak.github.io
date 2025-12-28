@@ -1,0 +1,12 @@
+.navigation__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navigation__menu {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,19 @@
+<header class="navigation">
+  <div class="container">
+    <nav class="navigation__inner" aria-label="Main">
+      <a class="navigation__logo" href="{{ "/" | relURL }}">
+        {{ .Site.Title }}
+      </a>
+
+      <div class="navigation__menu">
+        {{ with .Site.Menus.main }}
+          {{ range . }}
+            <a class="navigation__link" href="{{ .URL }}">
+              {{ .Name }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </nav>
+  </div>
+</header>

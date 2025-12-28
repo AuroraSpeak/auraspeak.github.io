@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>Aura-Speak</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Jannis Karpinski">
+<meta name="description" content="How am I, what am I building and Some Rules">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Blog">
+  <meta name="twitter:description" content="How am I, what am I building and Some Rules">
+
+<meta property="og:url" content="http://localhost:1313/">
+  <meta property="og:site_name" content="Aura-Speak">
+  <meta property="og:title" content="The Blog">
+  <meta property="og:description" content="How am I, what am I building and Some Rules">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+  
+    
+    <link rel="stylesheet" href="/css/custom.css" media="screen">
+  
+
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link rel="alternate" type="application/rss+xml" href="/index.xml" title="Aura-Speak" />
+
+
+<meta name="generator" content="Hugo 0.153.3">
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-dark">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <header class="navigation">
+  <div class="container">
+    <nav class="navigation__inner" aria-label="Main">
+      <a class="navigation__logo" href="/">
+        Aura-Speak
+      </a>
+
+      <div class="navigation__menu">
+        
+          
+            <a class="navigation__link" href="/">
+              Home
+            </a>
+          
+            <a class="navigation__link" href="/posts/">
+              Posts
+            </a>
+          
+            <a class="navigation__link" href="">
+              About
+            </a>
+          
+        
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="content">
+      
+  <section class="container">
+    <article>
+      <h1 id="a-new-beginning">
+  A new beginning
+  <a class="heading-link" href="#a-new-beginning">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Hi,</p>
+<p>ich bin Jannis Karpinski ein Pädagoge in der Jugendhilfe aus Deutschland. Seit meiner Jugend programmiere ich und habe viele Projekte nicht beendet (siehe mein Github). Seit einiger zeit habe ich mich etwas in golang verliebt und nutze seit dem an eigentlich nur noch diese Sprache. Irgendwann hat sichin meinem Kopf der Gedanke festgesetzt, dass ich nur das teile was ich will. Nicht mehr und nicht weniger. Im besonderen open source hat es mir also angetan und seit dem versuche ich hier etwas zu reißen.</p>
+<h2 id="what-is-this-blog-about">
+  What is this Blog about
+  <a class="heading-link" href="#what-is-this-blog-about">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>In diesem Blog werde ich meine Reise beschreiben ein Dezentrales Voice Chat system aufzubauen. Es soll sicher sein aber auch von der Community getragen werden, ich selber habe nicht alleine die Mittel all das zu hosten, weshalb, sollte es mal zu einem Release kommen, nur kleine Kernsysteme von mir gehostet werden und der rest von der Community gehostet werden soll.</p>
+<h2 id="goals-and-structure-of-the-blog">
+  Goals and Structure of the Blog
+  <a class="heading-link" href="#goals-and-structure-of-the-blog">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Der Blog soll Konzepte und Prinzipien verständlich erklären aber auch implementierungs Ideen geben und auch entscheidungen Begründen.</p>
+<p>Er soll auch für mich eine referenz sein, damit ich mich an alles erinnere.
+Daraus ergibt sich folgende reinfolge:</p>
+<ol>
+<li>Erklärung der Konzepte bis zu dem Punkt wo ich sie verstanden habe.</li>
+<li>Erklären warum ich diese Methode nutze</li>
+<li>Es Implementieren step für step</li>
+</ol>
+<p>Das hier wird kein go oder Crypto Grundkurs, prinzipien, die ich selber nicht verstanden habe werden eventuell erklärt und ich werde prinzipien, die ich selber nicht verstanden habe nochmal näher beleuchten. Damit möchte ich stolpersteine aus dem Weg räumen.</p>
+<p>Leiter kann ich nicht jede einzelne zeile hier teilen, deshalb werde ich immer wieder auf das networking repo verweisen. Dort könnt ihr alles nachschauen.</p>
+<h2 id="what-could-happen">
+  What could happen
+  <a class="heading-link" href="#what-could-happen">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Ich zeige euch nicht den optimalsten weg etwas zu schreiben. Nicht den richtigen weg etwas zu implementieren. Ich bin der überzeugung, dass es diesen nicht gibt, frei nach dem Motto: &ldquo;Viele wege führen nach Rom&rdquo;.</p>
+<p>Der Blog könnte einfach abbrechen. Wie gesagt, programmieren ist &ldquo;nur&rdquo; mein Hobby und auch ich kann irgendwann keine zeit oder lust mehr haben. Das ist aber nicht mein ziel nur eine realistische einschätzung (Pädagoge halt).</p>
+<p>Der Code kann natürlich auch fehler beinhalten oder Kritische sicherheitslücken öffnen, dann dürft ihr mich einfach ansschreiben oder auch ganz selber am Code mitarbeiten. Fühlt euch frei!</p>
+<h2 id="why-this-way">
+  Why this way?
+  <a class="heading-link" href="#why-this-way">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Dafür gibt es drei ganz einfache gründe:</p>
+<ol>
+<li>Ich lerne das alles gerade erst selber es ist also irgendwo ein gemeinsames Lernen</li>
+<li>Ich will es einfach machen, die Magie herrausnehemen. Jeder soll es verstehen können und selber nachbauen können.</li>
+<li>Jeder soll die Möglichkeit haben es selber zu bauen.</li>
+</ol>
+<h2 id="why-this-project">
+  Why this Project
+  <a class="heading-link" href="#why-this-project">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Auch das ist relativ einfach. Man stößt immer wieder auf zwei namen wenn man einen Voice Server haben will. Teamspeak oder Discord. Hinter beidem stecken Firmen, die Geld verdienen will. Beide machen es auf anderem Wege. Teamspeak verkauft Server Discord Daten. Wenn man nun sagt, dann nehme ich doch einfach Teamspeak, wird einem relativ schnell darauf stoßen, dass Teamspeak einfach ein paar Features fehlen. Da mich das alles irgendwie nervt will ich versuchen es selber zu bauen. Auch wenn das irgendwie unmöglich errscheint, ist mein leitspruch: &ldquo;Dann hat man einfach noch nicht genug rum gebastelt&rdquo;.</p>
+<hr>
+<p>Aber jetzt lasst uns das coden Starten!</p>
+
+    </article>
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+
+      <p>
+        Built by <strong>22peacemaker</strong>.
+        Writing to think clearly, building to learn.
+      </p>
+
+      <p>
+        © 2025 · All thoughts are my own with help of Chatgpt and many websites.
+      </p>
+
+      <p>
+        <a href="https://github.com/22peacemaker">GitHub</a>
+      </p>
+
+    </div>
+  </div>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
