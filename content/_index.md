@@ -9,49 +9,47 @@ externalLink = ""
 series = []
 +++
 
-# A new beginning
+# The Me and Why
 
-Hi,
+I am Jannis Karpinski, a youth welfare worker from Germany. I have been programming since my youth and have left many projects unfinished (see my Github). For some time now, I have fallen in love with Golang and have been using only this language ever since. At some point, the idea took hold in my mind that I would only share what I wanted to share. Not only on GitHub, but also where it is not immediately visible. I do not want all my data to be sold to data brokers to analyze my behavior and preferences, often without my consent or clear benefit to me. Therefore, only what I want to share should be passed on. Open source and people who voluntarily host software for the public can contribute to this. However, there must also be people who write this software. I want to be one of them!
 
-ich bin Jannis Karpinski ein Pädagoge in der Jugendhilfe aus Deutschland. Seit meiner Jugend programmiere ich und habe viele Projekte nicht beendet (siehe mein Github). Seit einiger zeit habe ich mich etwas in golang verliebt und nutze seit dem an eigentlich nur noch diese Sprache. Irgendwann hat sichin meinem Kopf der Gedanke festgesetzt, dass ich nur das teile was ich will. Nicht mehr und nicht weniger. Im besonderen open source hat es mir also angetan und seit dem versuche ich hier etwas zu reißen.
+## What is this Blog About
 
-## What is this Blog about
-
-In diesem Blog werde ich meine Reise beschreiben ein Dezentrales Voice Chat system aufzubauen. Es soll sicher sein aber auch von der Community getragen werden, ich selber habe nicht alleine die Mittel all das zu hosten, weshalb, sollte es mal zu einem Release kommen, nur kleine Kernsysteme von mir gehostet werden und der rest von der Community gehostet werden soll.
+In this blog, I will describe my journey to build a decentralized voice chat system. It should be secure but also supported by the community. I don't have the resources to host it all myself, which is why, if it ever gets released, only small core systems will be hosted by me and the rest will be hosted by the community. But honestly, I have to get that far first. Let's see if it works out.
 
 ## Goals and Structure of the Blog
 
-Der Blog soll Konzepte und Prinzipien verständlich erklären aber auch implementierungs Ideen geben und auch entscheidungen Begründen.
+The blog aims to explain concepts and principles in an understandable way, but also to provide implementation ideas and justify decisions.
+It is also intended to serve as a reference for me, so that I can remember everything.
+This results in the following sequence:
+1. Explanation of the concepts to the point where I understand them.
+2. Explanation of why I use this way.
+3. Step-by-step implementation.
 
-Er soll auch für mich eine referenz sein, damit ich mich an alles erinnere.
-Daraus ergibt sich folgende reinfolge:
-1. Erklärung der Konzepte bis zu dem Punkt wo ich sie verstanden habe.
-2. Erklären warum ich diese Methode nutze
-3. Es Implementieren step für step
+his is not a basic course on Go or cryptography. Principles that I myself have not understood may be explained, and I will take a closer look at principles that I myself have not understood. My aim is to remove any stumbling blocks.
 
-Das hier wird kein go oder Crypto Grundkurs, prinzipien, die ich selber nicht verstanden habe werden eventuell erklärt und ich werde prinzipien, die ich selber nicht verstanden habe nochmal näher beleuchten. Damit möchte ich stolpersteine aus dem Weg räumen.
+I cannot share every single line here, so I will refer back to the networking repo again and again. You can look up everything there.
 
-Leiter kann ich nicht jede einzelne zeile hier teilen, deshalb werde ich immer wieder auf das networking repo verweisen. Dort könnt ihr alles nachschauen.
+## What Could Happen
+I am not showing you the most optimal way to write something, nor the “correct” way to implement something. I am convinced that such a single correct way does not exist—true to the saying, “All roads lead to Rome.” (At least that’s how we say it in Germany.)
 
-## What could happen
+As I said, programming is my hobby, and even I might someday run out of time or motivation. That is not my goal, just a realistic assessment (I’m a pedagogue, after all).
 
-Ich zeige euch nicht den optimalsten weg etwas zu schreiben. Nicht den richtigen weg etwas zu implementieren. Ich bin der überzeugung, dass es diesen nicht gibt, frei nach dem Motto: "Viele wege führen nach Rom".
+The code may of course also contain errors or open up critical security vulnerabilities. In that case, feel free to contact me or even contribute to the code yourself. Feel free!
 
-Der Blog könnte einfach abbrechen. Wie gesagt, programmieren ist "nur" mein Hobby und auch ich kann irgendwann keine zeit oder lust mehr haben. Das ist aber nicht mein ziel nur eine realistische einschätzung (Pädagoge halt).
+## Why This Approach?
 
-Der Code kann natürlich auch fehler beinhalten oder Kritische sicherheitslücken öffnen, dann dürft ihr mich einfach ansschreiben oder auch ganz selber am Code mitarbeiten. Fühlt euch frei!
+There are three very simple reasons for this:
 
-## Why this way?
+1. I am just learning all this myself, so in a way we are learning together.
+2. I want to make it simple, take the magic out of it.
+3. Everyone should have the opportunity to build it themselves.
 
-Dafür gibt es drei ganz einfache gründe:
-1. Ich lerne das alles gerade erst selber es ist also irgendwo ein gemeinsames Lernen
-2. Ich will es einfach machen, die Magie herrausnehemen. Jeder soll es verstehen können und selber nachbauen können.
-3. Jeder soll die Möglichkeit haben es selber zu bauen. 
+## Why This Project?
 
-## Why this Project
+This is also relatively simple. You keep coming across two names when you want a voice server: TeamSpeak or Discord. Behind both are companies that want to make money. They just do it in different ways—TeamSpeak sells servers, Discord sells data.
 
-Auch das ist relativ einfach. Man stößt immer wieder auf zwei namen wenn man einen Voice Server haben will. Teamspeak oder Discord. Hinter beidem stecken Firmen, die Geld verdienen will. Beide machen es auf anderem Wege. Teamspeak verkauft Server Discord Daten. Wenn man nun sagt, dann nehme ich doch einfach Teamspeak, wird einem relativ schnell darauf stoßen, dass Teamspeak einfach ein paar Features fehlen. Da mich das alles irgendwie nervt will ich versuchen es selber zu bauen. Auch wenn das irgendwie unmöglich errscheint, ist mein leitspruch: "Dann hat man einfach noch nicht genug rum gebastelt".
+If you then say, “Fine, I’ll just use TeamSpeak,” you quickly run into the fact that TeamSpeak is simply missing a few features. Since all of this somehow annoys me, I want to try building it myself. Even if that seems impossible, my guiding principle is: “Then you just haven’t tinkered with it enough yet.”
 
----
 
-Aber jetzt lasst uns das coden Starten!
+I don’t even have to say that we’re using UDP sockets — not because it’s secret, but because it should become obvious once we break things down.
