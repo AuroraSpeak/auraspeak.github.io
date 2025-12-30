@@ -1,3 +1,40 @@
+/* Schriftarten: Inter für Text, JetBrains Mono Nerd für Code */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* Überschreibe Hauptschriftart mit Inter */
+body,
+.navigation__inner,
+.navigation__menu,
+.navigation__link,
+h1, h2, h3, h4, h5, h6,
+p, li, td, th,
+blockquote,
+.navigation__logo {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Überschreibe Code-Schriftart mit JetBrains Mono Nerd */
+/* Nerd Font wird von CDN geladen - für lokales Hosting die Schriftart in static/fonts/ speichern */
+@font-face {
+  font-family: 'JetBrains Mono Nerd Font';
+  src: url('https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts@3.0.1/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Nerd%20Font%20Complete%20Mono.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts@3.0.1/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Nerd%20Font%20Complete%20Mono.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+code,
+pre,
+.highlight,
+.highlight pre,
+.highlight code,
+.highlight pre code,
+pre code {
+  font-family: 'JetBrains Mono Nerd Font', 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+  font-feature-settings: "liga" 1, "calt" 1; /* Aktiviert Ligaturen */
+}
+
 .navigation__inner {
   display: flex;
   justify-content: space-between;

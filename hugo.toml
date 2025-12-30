@@ -1,5 +1,5 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
+baseURL = 'https://auraspeak.github.io/'
+languageCode = 'de-de'
 title = 'Aura-Speak'
 theme = "coder"
 [markup.highlight]
