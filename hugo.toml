@@ -12,6 +12,10 @@ style = "github-dark"
     colorScheme = "dark"
     customCSS = ["css/custom.css"]
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [menus]
     [[menus.main]]
         name = "Home"
