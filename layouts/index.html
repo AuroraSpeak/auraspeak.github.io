@@ -2,6 +2,23 @@
   <section class="container">
     <article>
       {{ .Content }}
+
+      <hr />
+
+      <h2>Latest posts</h2>
+      <ul>
+        {{/* Nimm die neuesten 5 Posts aus content/posts */}}
+        {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            — <small>{{ .Date.Format "2006-01-02" }}</small>
+          </li>
+        {{ end }}
+      </ul>
+
+      <p>
+        <a href="/posts/">All posts →</a>
+      </p>
     </article>
   </section>
 {{ end }}

@@ -1,0 +1,10 @@
+{{- /* Canonical */ -}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- /* Description: aus Front Matter "description", sonst Summary */ -}}
+<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}">
+
+{{- /* Hugo embedded templates for OG + Twitter + Schema */ -}}
+{{ partial "opengraph.html" . }}
+{{ partial "twitter_cards.html" . }}
+{{ partial "schema.html" . }}

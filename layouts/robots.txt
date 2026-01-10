@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://auraspeak.github.io/sitemap.xml

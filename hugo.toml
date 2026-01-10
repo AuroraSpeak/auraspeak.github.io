@@ -1,31 +1,44 @@
-baseURL = 'https://auraspeak.github.io/'
-languageCode = 'de-de'
-title = 'Aura-Speak'
+baseURL = "https://auraspeak.github.io/"
+languageCode = "en"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+enableGitInfo = true
+title = "Aura-Speak"
 theme = "coder"
+
 [markup.highlight]
 style = "github-dark"
+
+[pagination]
+pagerSize = 10
+
+[sitemap]
+changeFreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.5
+
 [params]
-    author = "Jannis Karpinski"
-    info = "Just a hobbyist that has high goals"
-    description = "Journal of writing an own Protocol using golang"
-    keywords = "blog,developer,personal"
-    colorScheme = "dark"
-    customCSS = ["css/custom.css"]
+author = "Jannis Karpinski"
+info = "Just a hobbyist that has high goals"
+description = "Devlog: building a decentralized, secure voice chat system (Go, UDP, networking, audio)."
+keywords = ["decentralized voice chat", "go", "golang", "udp", "networking", "realtime audio", "protocol", "blog", "developer", "personal"]
+colorScheme = "dark"
+customCSS = ["css/custom.css"]
 
 [caches]
   [caches.images]
-    dir = ':cacheDir/images'
+    dir = ":cacheDir/images"
 
 [menus]
-    [[menus.main]]
-        name = "Home"
-        pageRef = "/"
-        weight = 10
-    [[menus.main]]
-        name = "Posts"
-        pageRef = "/posts"
-        weight = 20
-    [[menus.main]]
-        name = "About"
-        pageRef = "/about"
-        weight = 30
+  [[menus.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 10
+  [[menus.main]]
+    name = "Posts"
+    pageRef = "/posts"
+    weight = 20
+  [[menus.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 30

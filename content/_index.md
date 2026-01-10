@@ -26,7 +26,7 @@ This results in the following sequence:
 2. Explanation of why I use this way.
 3. Step-by-step implementation.
 
-his is not a basic course on Go or cryptography. Principles that I myself have not understood may be explained, and I will take a closer look at principles that I myself have not understood. My aim is to remove any stumbling blocks.
+This is not a basic course on Go or cryptography. Principles that I myself have not understood may be explained, and I will take a closer look at principles that I myself have not understood. My aim is to remove any stumbling blocks.
 
 I cannot share every single line here, so I will refer back to the networking repo again and again. You can look up everything there.
 
